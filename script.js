@@ -38,7 +38,7 @@
      var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
 
      var blockleft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
-     if(blockleft<20 && blockLeft>0 &&  characterTop>=130){
+     if(blockleft<20 && blockleft>0 &&  characterTop>=130){
      block.style.animation = "none";/*It stops the animaation after dinasour or red character and the cactus or the blue block hit eaach other*/
      block.style.display = "none"; /* Now we don't see it anymore*/
      alert("u lose.");
