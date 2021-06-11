@@ -1,0 +1,59 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+#game{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+#character{
+    width:20px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top:150px;
+    /* animation: jump 500ms infinite   I am removing this because we don't want our dinasour to constantly jump so we will
+     write this jumping animation code in new class called "animate" and the code in class animate wil be smartly executed by our javascript function*/
+}
+
+.animate{
+    animation: jump 500ms; /* We removed infinte linear because we dont want dinasour to jump constantly */
+}
+/* Now we have our character(red block as dinasour and cactus as blue block) */
+/* Now we want our dinasour and cactus to move */
+/* So for animation we will use-  @keyframes thing to animate and give some movement */
+
+
+@keyframes jump{
+0%{top:150px;}  /*Without this line also animation is working.*/
+30%{top: 100px;}
+70%{top: 100px;}
+100%{top: 150px;} /*Without this line also animation is working.*/
+}
+
+
+#block{
+    width:20px;
+    height: 20px;
+    background-color: blue;
+    position: relative;
+    top:130px;
+    left: 480px;
+    animation: block 1s infinite linear; 
+}
+
+
+@keyframes block{
+    0%{left:480px;}   /*Without this line also animation is working.*/
+    100%{left:-40px;}
+
+}
+
+
+/* We do not want our character red block or dinasour to constantly jump rather we want it to jump when we call a javascript function*/
+  /* so we will create a new class called animate and all that class does is to add the animation "Jump"*/
+  /*  so I want Javascript function to add the class "jump" to the character so that it jumps and after jumping javascript function 
+  also removes that class so that it does not jump and move in a straight line afterwards*/
